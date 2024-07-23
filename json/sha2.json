@@ -1,0 +1,366 @@
+[
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 302,
+                "line_content": "sha2 = \"0.10.8\""
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/ledger/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 39,
+                "line_content": "sha2 = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/ledger/src/sigverify_shreds.rs",
+        "matches": [
+            {
+                "line_number": 6,
+                "line_content": "sha2::{Digest, Sha512},"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/install/src/command.rs",
+        "matches": [
+            {
+                "line_number": 64,
+                "line_content": "/// Downloads a file at `url` to a temporary location.  If `expected_sha256` is"
+            },
+            {
+                "line_number": 74,
+                "line_content": "expected_sha256: Option<&Hash>,"
+            },
+            {
+                "line_number": 76,
+                "line_content": "fn sha256_file_digest<P: AsRef<Path>>(path: P) -> Result<Hash, Box<dyn std::error::Error>> {"
+            },
+            {
+                "line_number": 148,
+                "line_content": "let temp_file_sha256 = sha256_file_digest(&temp_file)"
+            },
+            {
+                "line_number": 151,
+                "line_content": "if expected_sha256.is_some() && expected_sha256 != Some(&temp_file_sha256) {"
+            },
+            {
+                "line_number": 156,
+                "line_content": "Ok((temp_dir, temp_file, temp_file_sha256))"
+            },
+            {
+                "line_number": 722,
+                "line_content": "let (temp_dir, temp_archive, temp_archive_sha256) = download_to_temp(download_url, None)"
+            },
+            {
+                "line_number": 727,
+                "line_content": "if temp_archive_sha256 == update_manifest.download_sha256 {"
+            },
+            {
+                "line_number": 759,
+                "line_content": "update_manifest.manifest.download_sha256 = temp_archive_sha256;"
+            },
+            {
+                "line_number": 970,
+                "line_content": "let (updated_version, download_url_and_sha256, release_dir) = if let Some(explicit_release) ="
+            },
+            {
+                "line_number": 1018,
+                "line_content": "let download_url_and_sha256 = if release_dir.exists() {"
+            },
+            {
+                "line_number": 1024,
+                "line_content": "(release_semver, download_url_and_sha256, release_dir)"
+            },
+            {
+                "line_number": 1032,
+                "line_content": "let (_temp_dir, temp_file, _temp_archive_sha256) ="
+            },
+            {
+                "line_number": 1126,
+                "line_content": "let release_dir = config.release_dir(&update_manifest.download_sha256.to_string());"
+            },
+            {
+                "line_number": 1129,
+                "line_content": "let archive_sha256 = Some(update_manifest.download_sha256);"
+            },
+            {
+                "line_number": 1132,
+                "line_content": "Some((download_url, archive_sha256)),"
+            },
+            {
+                "line_number": 1146,
+                "line_content": "if let Some((download_url, archive_sha256)) = download_url_and_sha256 {"
+            },
+            {
+                "line_number": 1147,
+                "line_content": "let (_temp_dir, temp_archive, _temp_archive_sha256) ="
+            },
+            {
+                "line_number": 1148,
+                "line_content": "download_to_temp(&download_url, archive_sha256.as_ref())"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/install/src/update_manifest.rs",
+        "matches": [
+            {
+                "line_number": 17,
+                "line_content": "pub download_sha256: Hash, // SHA256 digest of the release tar.bz2 file"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/target/release/build/oid-registry-cbdc8458b5bcd629/out/oid_db.rs",
+        "matches": [
+            {
+                "line_number": 342,
+                "line_content": "self.insert(oid!(2.16.840.1.101.3.4.2.1), OidEntry::new(\"sha256\", \"Secure Hash Algorithm that uses a 256 bit key (SHA256)\"));"
+            },
+            {
+                "line_number": 358,
+                "line_content": "self.insert(oid!(1.2.840.113549.1.1.11), OidEntry::new(\"sha256WithRSAEncryption\", \"SHA256 with RSA encryption\"));"
+            },
+            {
+                "line_number": 361,
+                "line_content": "self.insert(oid!(1.2.840.113549.1.1.14), OidEntry::new(\"sha224WithRSAEncryption\", \"SHA224 with RSA encryption\"));"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/target/debug/build/oid-registry-cbff4a0a3518657e/out/oid_db.rs",
+        "matches": [
+            {
+                "line_number": 342,
+                "line_content": "self.insert(oid!(2.16.840.1.101.3.4.2.1), OidEntry::new(\"sha256\", \"Secure Hash Algorithm that uses a 256 bit key (SHA256)\"));"
+            },
+            {
+                "line_number": 358,
+                "line_content": "self.insert(oid!(1.2.840.113549.1.1.11), OidEntry::new(\"sha256WithRSAEncryption\", \"SHA256 with RSA encryption\"));"
+            },
+            {
+                "line_number": 361,
+                "line_content": "self.insert(oid!(1.2.840.113549.1.1.14), OidEntry::new(\"sha224WithRSAEncryption\", \"SHA224 with RSA encryption\"));"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/target/debug/build/oid-registry-feb50f81c2dc56a1/out/oid_db.rs",
+        "matches": [
+            {
+                "line_number": 342,
+                "line_content": "self.insert(oid!(2.16.840.1.101.3.4.2.1), OidEntry::new(\"sha256\", \"Secure Hash Algorithm that uses a 256 bit key (SHA256)\"));"
+            },
+            {
+                "line_number": 358,
+                "line_content": "self.insert(oid!(1.2.840.113549.1.1.11), OidEntry::new(\"sha256WithRSAEncryption\", \"SHA256 with RSA encryption\"));"
+            },
+            {
+                "line_number": 361,
+                "line_content": "self.insert(oid!(1.2.840.113549.1.1.14), OidEntry::new(\"sha224WithRSAEncryption\", \"SHA224 with RSA encryption\"));"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/program-runtime/src/compute_budget.rs",
+        "matches": [
+            {
+                "line_number": 39,
+                "line_content": "pub sha256_base_cost: u64,"
+            },
+            {
+                "line_number": 41,
+                "line_content": "pub sha256_byte_cost: u64,"
+            },
+            {
+                "line_number": 43,
+                "line_content": "pub sha256_max_slices: u64,"
+            },
+            {
+                "line_number": 140,
+                "line_content": "sha256_base_cost: 85,"
+            },
+            {
+                "line_number": 141,
+                "line_content": "sha256_byte_cost: 1,"
+            },
+            {
+                "line_number": 142,
+                "line_content": "sha256_max_slices: 20_000,"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/programs/bpf_loader/src/syscalls/mod.rs",
+        "matches": [
+            {
+                "line_number": 163,
+                "line_content": "compute_budget.sha256_base_cost"
+            },
+            {
+                "line_number": 166,
+                "line_content": "compute_budget.sha256_byte_cost"
+            },
+            {
+                "line_number": 169,
+                "line_content": "compute_budget.sha256_max_slices"
+            },
+            {
+                "line_number": 190,
+                "line_content": "compute_budget.sha256_base_cost"
+            },
+            {
+                "line_number": 193,
+                "line_content": "compute_budget.sha256_byte_cost"
+            },
+            {
+                "line_number": 196,
+                "line_content": "compute_budget.sha256_max_slices"
+            },
+            {
+                "line_number": 217,
+                "line_content": "compute_budget.sha256_base_cost"
+            },
+            {
+                "line_number": 220,
+                "line_content": "compute_budget.sha256_byte_cost"
+            },
+            {
+                "line_number": 223,
+                "line_content": "compute_budget.sha256_max_slices"
+            },
+            {
+                "line_number": 332,
+                "line_content": "result.register_function_hashed(*b\"sol_sha256\", SyscallHash::vm::<Sha256Hasher>)?;"
+            },
+            {
+                "line_number": 1541,
+                "line_content": ".saturating_add(budget.sha256_base_cost)"
+            },
+            {
+                "line_number": 2521,
+                "line_content": "fn test_syscall_sha256() {"
+            },
+            {
+                "line_number": 2554,
+                "line_content": "(invoke_context.get_compute_budget().sha256_base_cost"
+            },
+            {
+                "line_number": 2558,
+                "line_content": ".sha256_byte_cost"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/programs/sbf/rust/sha/src/lib.rs",
+        "matches": [
+            {
+                "line_number": 6,
+                "line_content": "fn test_sha256_hasher() {"
+            },
+            {
+                "line_number": 35,
+                "line_content": "test_sha256_hasher();"
+            },
+            {
+                "line_number": 51,
+                "line_content": "test_sha256_hasher();"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 76,
+                "line_content": "sha2 = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 34,
+                "line_content": "sha2 = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/src/hash.rs",
+        "matches": [
+            {
+                "line_number": 10,
+                "line_content": "sha2::{Digest, Sha256},"
+            },
+            {
+                "line_number": 164,
+                "line_content": "crate::syscalls::sol_sha256("
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/src/syscalls/definitions.rs",
+        "matches": [
+            {
+                "line_number": 45,
+                "line_content": "define_syscall!(fn sol_sha256(vals: *const u8, val_len: u64, hash_result: *mut u8) -> u64);"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/src/signer/keypair.rs",
+        "matches": [
+            {
+                "line_number": 252,
+                "line_content": "pbkdf2::pbkdf2::<Hmac<sha2::Sha512>>("
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/frozen-abi/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 20,
+                "line_content": "sha2 = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/frozen-abi/src/hash.rs",
+        "matches": [
+            {
+                "line_number": 2,
+                "line_content": "sha2::{Digest, Sha256},"
+            },
+            {
+                "line_number": 20,
+                "line_content": "// At the time of this writing, the sha2 library is stuck on an old version"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/cargo-registry/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 20,
+                "line_content": "sha2 = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/cargo-registry/src/crate_handler.rs",
+        "matches": [
+            {
+                "line_number": 14,
+                "line_content": "sha2::{Digest, Sha256},"
+            }
+        ]
+    }
+]

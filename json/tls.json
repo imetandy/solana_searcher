@@ -1,0 +1,562 @@
+[
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 290,
+                "line_content": "rustls = { version = \"0.21.11\", default-features = false, features = [\"quic\"] }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/metrics/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 17,
+                "line_content": "reqwest = { workspace = true, features = [\"blocking\", \"brotli\", \"deflate\", \"gzip\", \"rustls-tls\", \"json\"] }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/rpc-test/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 19,
+                "line_content": "reqwest = { workspace = true, features = [\"blocking\", \"brotli\", \"deflate\", \"gzip\", \"rustls-tls\", \"json\"] }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/quic-client/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 22,
+                "line_content": "rustls = { workspace = true, features = [\"dangerous_configuration\"] }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/quic-client/tests/quic_client.rs",
+        "matches": [
+            {
+                "line_number": 16,
+                "line_content": "tls_certificates::new_self_signed_tls_certificate,"
+            },
+            {
+                "line_number": 279,
+                "line_content": "new_self_signed_tls_certificate(&Keypair::new(), IpAddr::V4(Ipv4Addr::UNSPECIFIED))"
+            },
+            {
+                "line_number": 301,
+                "line_content": "new_self_signed_tls_certificate(&Keypair::new(), IpAddr::V4(Ipv4Addr::LOCALHOST))"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/quic-client/src/lib.rs",
+        "matches": [
+            {
+                "line_number": 33,
+                "line_content": "tls_certificates::new_self_signed_tls_certificate,"
+            },
+            {
+                "line_number": 115,
+                "line_content": "let (cert, priv_key) = new_self_signed_tls_certificate(&Keypair::new(), addr)?;"
+            },
+            {
+                "line_number": 158,
+                "line_content": "let (cert, priv_key) = new_self_signed_tls_certificate(keypair, ipaddr)?;"
+            },
+            {
+                "line_number": 171,
+                "line_content": "let (cert, priv_key) = new_self_signed_tls_certificate(keypair, self.addr)?;"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/quic-client/src/nonblocking/quic_client.rs",
+        "matches": [
+            {
+                "line_number": 30,
+                "line_content": "nonblocking::quic::ALPN_TPU_PROTOCOL_ID, tls_certificates::new_self_signed_tls_certificate,"
+            },
+            {
+                "line_number": 49,
+                "line_content": "impl rustls::client::ServerCertVerifier for SkipServerVerification {"
+            },
+            {
+                "line_number": 52,
+                "line_content": "_end_entity: &rustls::Certificate,"
+            },
+            {
+                "line_number": 53,
+                "line_content": "_intermediates: &[rustls::Certificate],"
+            },
+            {
+                "line_number": 54,
+                "line_content": "_server_name: &rustls::ServerName,"
+            },
+            {
+                "line_number": 58,
+                "line_content": ") -> Result<rustls::client::ServerCertVerified, rustls::Error> {"
+            },
+            {
+                "line_number": 59,
+                "line_content": "Ok(rustls::client::ServerCertVerified::assertion())"
+            },
+            {
+                "line_number": 64,
+                "line_content": "pub certificate: rustls::Certificate,"
+            },
+            {
+                "line_number": 65,
+                "line_content": "pub key: rustls::PrivateKey,"
+            },
+            {
+                "line_number": 117,
+                "line_content": "let mut crypto = rustls::ClientConfig::builder()"
+            },
+            {
+                "line_number": 152,
+                "line_content": "new_self_signed_tls_certificate(&Keypair::new(), IpAddr::V4(Ipv4Addr::UNSPECIFIED))"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/install/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 25,
+                "line_content": "reqwest = { workspace = true, features = [\"blocking\", \"brotli\", \"deflate\", \"gzip\", \"rustls-tls\", \"json\"] }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/core/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 25,
+                "line_content": "etcd-client = { workspace = true, features = [\"tls\"] }"
+            },
+            {
+                "line_number": 41,
+                "line_content": "rustls = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/core/src/consensus/tower_storage.rs",
+        "matches": [
+            {
+                "line_number": 234,
+                "line_content": "tls_config: Option<EtcdTlsConfig>,"
+            },
+            {
+                "line_number": 245,
+                "line_content": "tls_config.map(|tls_config| {"
+            },
+            {
+                "line_number": 246,
+                "line_content": "etcd_client::ConnectOptions::default().with_tls("
+            },
+            {
+                "line_number": 248,
+                "line_content": ".domain_name(tls_config.domain_name)"
+            },
+            {
+                "line_number": 250,
+                "line_content": "tls_config.ca_certificate,"
+            },
+            {
+                "line_number": 253,
+                "line_content": "tls_config.identity_certificate,"
+            },
+            {
+                "line_number": 254,
+                "line_content": "tls_config.identity_private_key,"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/core/src/repair/quic_endpoint.rs",
+        "matches": [
+            {
+                "line_number": 13,
+                "line_content": "rustls::{Certificate, PrivateKey},"
+            },
+            {
+                "line_number": 19,
+                "line_content": "quic::SkipClientVerification, tls_certificates::new_self_signed_tls_certificate,"
+            },
+            {
+                "line_number": 110,
+                "line_content": "TlsError(#[from] rustls::Error),"
+            },
+            {
+                "line_number": 130,
+                "line_content": "let (cert, key) = new_self_signed_tls_certificate(keypair, address)?;"
+            },
+            {
+                "line_number": 177,
+                "line_content": "fn new_server_config(cert: Certificate, key: PrivateKey) -> Result<ServerConfig, rustls::Error> {"
+            },
+            {
+                "line_number": 178,
+                "line_content": "let mut config = rustls::ServerConfig::builder()"
+            },
+            {
+                "line_number": 191,
+                "line_content": "fn new_client_config(cert: Certificate, key: PrivateKey) -> Result<ClientConfig, rustls::Error> {"
+            },
+            {
+                "line_number": 192,
+                "line_content": "let mut config = rustls::ClientConfig::builder()"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/validator/src/main.rs",
+        "matches": [
+            {
+                "line_number": 1143,
+                "line_content": "let tls_config = tower_storage::EtcdTlsConfig {"
+            },
+            {
+                "line_number": 1151,
+                "line_content": "tower_storage::EtcdTowerStorage::new(endpoints, Some(tls_config))"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/notifier/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 14,
+                "line_content": "reqwest = { workspace = true, features = [\"blocking\", \"brotli\", \"deflate\", \"gzip\", \"rustls-tls\", \"json\"] }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/download-utils/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 16,
+                "line_content": "reqwest = { workspace = true, features = [\"blocking\", \"brotli\", \"deflate\", \"gzip\", \"rustls-tls\", \"json\"] }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/target/release/build/librocksdb-sys-3008184acd024ead/out/bindings.rs",
+        "matches": [
+            {
+                "line_number": 1372,
+                "line_content": "ttls: *const libc::c_int,"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/target/debug/build/librocksdb-sys-4b34bc0f67e26a76/out/bindings.rs",
+        "matches": [
+            {
+                "line_number": 1372,
+                "line_content": "ttls: *const libc::c_int,"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/client-test/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 36,
+                "line_content": "tungstenite = { workspace = true, features = [\"rustls-tls-webpki-roots\"] }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/pubsub-client/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 16,
+                "line_content": "reqwest = { workspace = true, features = [\"blocking\", \"brotli\", \"deflate\", \"gzip\", \"rustls-tls\", \"json\"] }"
+            },
+            {
+                "line_number": 27,
+                "line_content": "tokio-tungstenite = { workspace = true, features = [\"rustls-tls-webpki-roots\"] }"
+            },
+            {
+                "line_number": 28,
+                "line_content": "tungstenite = { workspace = true, features = [\"rustls-tls-webpki-roots\"] }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/cli/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 26,
+                "line_content": "reqwest = { workspace = true, features = [\"blocking\", \"brotli\", \"deflate\", \"gzip\", \"rustls-tls\", \"json\"] }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/rpc-client/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 19,
+                "line_content": "reqwest = { workspace = true, features = [\"blocking\", \"brotli\", \"deflate\", \"gzip\", \"rustls-tls\", \"json\"] }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/rpc-client/src/nonblocking/rpc_client.rs",
+        "matches": [
+            {
+                "line_number": 5398,
+                "line_content": "pub(crate) fn get_rpc_request_str(rpc_addr: SocketAddr, tls: bool) -> String {"
+            },
+            {
+                "line_number": 5399,
+                "line_content": "if tls {"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/streamer/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 30,
+                "line_content": "rustls = { workspace = true, features = [\"dangerous_configuration\"] }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/streamer/src/quic.rs",
+        "matches": [
+            {
+                "line_number": 4,
+                "line_content": "tls_certificates::new_self_signed_tls_certificate,"
+            },
+            {
+                "line_number": 9,
+                "line_content": "rustls::{server::ClientCertVerified, Certificate, DistinguishedName},"
+            },
+            {
+                "line_number": 45,
+                "line_content": "impl rustls::server::ClientCertVerifier for SkipClientVerification {"
+            },
+            {
+                "line_number": 55,
+                "line_content": ") -> Result<ClientCertVerified, rustls::Error> {"
+            },
+            {
+                "line_number": 56,
+                "line_content": "Ok(rustls::server::ClientCertVerified::assertion())"
+            },
+            {
+                "line_number": 67,
+                "line_content": "let (cert, priv_key) = new_self_signed_tls_certificate(identity_keypair, gossip_host)?;"
+            },
+            {
+                "line_number": 74,
+                "line_content": "let mut server_tls_config = rustls::ServerConfig::builder()"
+            },
+            {
+                "line_number": 78,
+                "line_content": "server_tls_config.alpn_protocols = vec![ALPN_TPU_PROTOCOL_ID.to_vec()];"
+            },
+            {
+                "line_number": 80,
+                "line_content": "let mut server_config = ServerConfig::with_crypto(Arc::new(server_tls_config));"
+            },
+            {
+                "line_number": 117,
+                "line_content": "TlsError(#[from] rustls::Error),"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/streamer/src/lib.rs",
+        "matches": [
+            {
+                "line_number": 9,
+                "line_content": "pub mod tls_certificates;"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/streamer/src/tls_certificates.rs",
+        "matches": [
+            {
+                "line_number": 9,
+                "line_content": "pub fn new_self_signed_tls_certificate("
+            },
+            {
+                "line_number": 12,
+                "line_content": ") -> Result<(rustls::Certificate, rustls::PrivateKey), RcgenError> {"
+            },
+            {
+                "line_number": 54,
+                "line_content": "let priv_key = rustls::PrivateKey(priv_key);"
+            },
+            {
+                "line_number": 55,
+                "line_content": "Ok((rustls::Certificate(cert_der), priv_key))"
+            },
+            {
+                "line_number": 58,
+                "line_content": "pub fn get_pubkey_from_tls_certificate(der_cert: &rustls::Certificate) -> Option<Pubkey> {"
+            },
+            {
+                "line_number": 71,
+                "line_content": "fn test_generate_tls_certificate() {"
+            },
+            {
+                "line_number": 75,
+                "line_content": "new_self_signed_tls_certificate(&keypair, IpAddr::V4(Ipv4Addr::LOCALHOST))"
+            },
+            {
+                "line_number": 77,
+                "line_content": "if let Some(pubkey) = get_pubkey_from_tls_certificate(&cert) {"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/streamer/src/nonblocking/quic.rs",
+        "matches": [
+            {
+                "line_number": 9,
+                "line_content": "tls_certificates::get_pubkey_from_tls_certificate,"
+            },
+            {
+                "line_number": 259,
+                "line_content": ".downcast::<Vec<rustls::Certificate>>()"
+            },
+            {
+                "line_number": 263,
+                "line_content": ".and_then(get_pubkey_from_tls_certificate)"
+            },
+            {
+                "line_number": 1229,
+                "line_content": "tls_certificates::new_self_signed_tls_certificate,"
+            },
+            {
+                "line_number": 1253,
+                "line_content": "impl rustls::client::ServerCertVerifier for SkipServerVerification {"
+            },
+            {
+                "line_number": 1256,
+                "line_content": "_end_entity: &rustls::Certificate,"
+            },
+            {
+                "line_number": 1257,
+                "line_content": "_intermediates: &[rustls::Certificate],"
+            },
+            {
+                "line_number": 1258,
+                "line_content": "_server_name: &rustls::ServerName,"
+            },
+            {
+                "line_number": 1262,
+                "line_content": ") -> Result<rustls::client::ServerCertVerified, rustls::Error> {"
+            },
+            {
+                "line_number": 1263,
+                "line_content": "Ok(rustls::client::ServerCertVerified::assertion())"
+            },
+            {
+                "line_number": 1269,
+                "line_content": "let (cert, key) = new_self_signed_tls_certificate(keypair, ipaddr)"
+            },
+            {
+                "line_number": 1272,
+                "line_content": "let mut crypto = rustls::ClientConfig::builder()"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/cargo-build-sbf/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 19,
+                "line_content": "reqwest = { workspace = true, features = [\"blocking\", \"rustls-tls\"] }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/storage-bigtable/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 36,
+                "line_content": "tonic = { workspace = true, features = [\"tls\", \"transport\"] }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/storage-bigtable/src/bigtable.rs",
+        "matches": [
+            {
+                "line_number": 180,
+                "line_content": ".tls_config("
+            },
+            {
+                "line_number": 209,
+                "line_content": "proxy_connector.set_tls(None);"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/turbine/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 25,
+                "line_content": "rustls = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/turbine/src/quic_endpoint.rs",
+        "matches": [
+            {
+                "line_number": 12,
+                "line_content": "rustls::{Certificate, PrivateKey},"
+            },
+            {
+                "line_number": 17,
+                "line_content": "quic::SkipClientVerification, tls_certificates::new_self_signed_tls_certificate,"
+            },
+            {
+                "line_number": 85,
+                "line_content": "TlsError(#[from] rustls::Error),"
+            },
+            {
+                "line_number": 110,
+                "line_content": "let (cert, key) = new_self_signed_tls_certificate(keypair, address)?;"
+            },
+            {
+                "line_number": 157,
+                "line_content": "fn new_server_config(cert: Certificate, key: PrivateKey) -> Result<ServerConfig, rustls::Error> {"
+            },
+            {
+                "line_number": 158,
+                "line_content": "let mut config = rustls::ServerConfig::builder()"
+            },
+            {
+                "line_number": 171,
+                "line_content": "fn new_client_config(cert: Certificate, key: PrivateKey) -> Result<ClientConfig, rustls::Error> {"
+            },
+            {
+                "line_number": 172,
+                "line_content": "let mut config = rustls::ClientConfig::builder()"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/rpc-client-api/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 16,
+                "line_content": "reqwest = { workspace = true, features = [\"blocking\", \"brotli\", \"deflate\", \"gzip\", \"rustls-tls\", \"json\"] }"
+            }
+        ]
+    }
+]

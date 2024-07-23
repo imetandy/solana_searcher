@@ -1,0 +1,118 @@
+[
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 185,
+                "line_content": "curve25519-dalek = \"3.2.1\""
+            },
+            {
+                "line_number": 514,
+                "line_content": "# Our dependency tree has `curve25519-dalek` v3.2.1.  They have removed the"
+            },
+            {
+                "line_number": 518,
+                "line_content": "# `curve25519-dalek` maintainers are saying they do not want to invest any more"
+            },
+            {
+                "line_number": 521,
+                "line_content": "# https://github.com/dalek-cryptography/curve25519-dalek/issues/452#issuecomment-1749809428"
+            },
+            {
+                "line_number": 527,
+                "line_content": "# `curve25519-dalek` v3.2.1 release:"
+            },
+            {
+                "line_number": 529,
+                "line_content": "# https://github.com/dalek-cryptography/curve25519-dalek/releases/tag/3.2.1"
+            },
+            {
+                "line_number": 533,
+                "line_content": "# https://github.com/dalek-cryptography/curve25519-dalek/commit/29e5c29b0e5c6821e4586af58b0d0891dd2ec639"
+            },
+            {
+                "line_number": 537,
+                "line_content": "# https://github.com/dalek-cryptography/curve25519-dalek/compare/3.2.1...solana-labs:curve25519-dalek:b500cdc2a920cd5bff9e2dd974d7b97349d61464"
+            },
+            {
+                "line_number": 541,
+                "line_content": "# https://github.com/dalek-cryptography/curve25519-dalek/compare/3.2.1...solana-labs:curve25519-dalek:3.2.1-unpin-zeroize"
+            },
+            {
+                "line_number": 543,
+                "line_content": "[patch.crates-io.curve25519-dalek]"
+            },
+            {
+                "line_number": 544,
+                "line_content": "git = \"https://github.com/anza-xyz/curve25519-dalek.git\""
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/zk-token-sdk/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 26,
+                "line_content": "curve25519-dalek = { workspace = true, features = [\"serde\"] }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/zk-token-sdk/src/encryption/mod.rs",
+        "matches": [
+            {
+                "line_number": 6,
+                "line_content": "//! [curve25519-dalek](https://docs.rs/curve25519-dalek/latest/curve25519_dalek/ristretto/index.html)"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/programs/zk-token-proof-tests/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 12,
+                "line_content": "curve25519-dalek = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/programs/zk-token-proof/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 21,
+                "line_content": "curve25519-dalek = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 50,
+                "line_content": "curve25519-dalek = { workspace = true, optional = true }"
+            },
+            {
+                "line_number": 93,
+                "line_content": "curve25519-dalek = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 57,
+                "line_content": "curve25519-dalek = { workspace = true, features = [\"serde\"] }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/perf/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 16,
+                "line_content": "curve25519-dalek = { workspace = true }"
+            }
+        ]
+    }
+]

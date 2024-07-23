@@ -1,0 +1,29 @@
+[
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 305,
+                "line_content": "siphasher = \"0.3.11\""
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 78,
+                "line_content": "siphasher = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/src/epoch_rewards_hasher.rs",
+        "matches": [
+            {
+                "line_number": 2,
+                "line_content": "siphasher::sip::SipHasher13,"
+            }
+        ]
+    }
+]

@@ -1,0 +1,1606 @@
+[
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 240,
+                "line_content": "libsecp256k1 = \"0.6.0\""
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/cost-model/src/block_cost_limits.rs",
+        "matches": [
+            {
+                "line_number": 7,
+                "line_content": "compute_budget, ed25519_program, loader_v4, pubkey::Pubkey, secp256k1_program,"
+            },
+            {
+                "line_number": 27,
+                "line_content": "/// Number of compute units for one secp256k1 signature verification."
+            },
+            {
+                "line_number": 50,
+                "line_content": "(secp256k1_program::id(), 0),"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/cost-model/src/cost_tracker.rs",
+        "matches": [
+            {
+                "line_number": 62,
+                "line_content": "secp256k1_instruction_signature_count: u64,"
+            },
+            {
+                "line_number": 84,
+                "line_content": "secp256k1_instruction_signature_count: 0,"
+            },
+            {
+                "line_number": 168,
+                "line_content": "\"secp256k1_instruction_signature_count\","
+            },
+            {
+                "line_number": 169,
+                "line_content": "self.secp256k1_instruction_signature_count,"
+            },
+            {
+                "line_number": 242,
+                "line_content": "self.secp256k1_instruction_signature_count,"
+            },
+            {
+                "line_number": 243,
+                "line_content": "tx_cost.num_secp256k1_instruction_signatures()"
+            },
+            {
+                "line_number": 261,
+                "line_content": "self.secp256k1_instruction_signature_count = self"
+            },
+            {
+                "line_number": 262,
+                "line_content": ".secp256k1_instruction_signature_count"
+            },
+            {
+                "line_number": 263,
+                "line_content": ".saturating_sub(tx_cost.num_secp256k1_instruction_signatures());"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/cost-model/src/transaction_cost.rs",
+        "matches": [
+            {
+                "line_number": 98,
+                "line_content": "pub fn num_secp256k1_instruction_signatures(&self) -> u64 {"
+            },
+            {
+                "line_number": 101,
+                "line_content": "Self::Transaction(usage_cost) => usage_cost.num_secp256k1_instruction_signatures,"
+            },
+            {
+                "line_number": 127,
+                "line_content": "pub num_secp256k1_instruction_signatures: u64,"
+            },
+            {
+                "line_number": 143,
+                "line_content": "num_secp256k1_instruction_signatures: 0u64,"
+            },
+            {
+                "line_number": 164,
+                "line_content": "&& self.num_secp256k1_instruction_signatures"
+            },
+            {
+                "line_number": 165,
+                "line_content": "== other.num_secp256k1_instruction_signatures"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/cost-model/src/cost_model.rs",
+        "matches": [
+            {
+                "line_number": 59,
+                "line_content": "tx_cost.num_secp256k1_instruction_signatures ="
+            },
+            {
+                "line_number": 60,
+                "line_content": "signatures_count_detail.num_secp256k1_instruction_signatures();"
+            },
+            {
+                "line_number": 68,
+                "line_content": ".num_secp256k1_instruction_signatures()"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/core/src/banking_stage/packet_filter.rs",
+        "matches": [
+            {
+                "line_number": 4,
+                "line_content": "solana_sdk::{ed25519_program, saturating_add_assign, secp256k1_program},"
+            },
+            {
+                "line_number": 42,
+                "line_content": "if secp256k1_program::check_id(program_id) || ed25519_program::check_id(program_id) {"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/program-runtime/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 35,
+                "line_content": "libsecp256k1 = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/program-runtime/src/compute_budget.rs",
+        "matches": [
+            {
+                "line_number": 56,
+                "line_content": "/// Number of compute units consumed to call secp256k1_recover"
+            },
+            {
+                "line_number": 57,
+                "line_content": "pub secp256k1_recover_cost: u64,"
+            },
+            {
+                "line_number": 149,
+                "line_content": "secp256k1_recover_cost: 25_000,"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/program-runtime/src/message_processor.rs",
+        "matches": [
+            {
+                "line_number": 187,
+                "line_content": "secp256k1_instruction::new_secp256k1_instruction,"
+            },
+            {
+                "line_number": 188,
+                "line_content": "secp256k1_program,"
+            },
+            {
+                "line_number": 621,
+                "line_content": "let mut secp256k1_account = AccountSharedData::new(1, 0, &native_loader::id());"
+            },
+            {
+                "line_number": 622,
+                "line_content": "secp256k1_account.set_executable(true);"
+            },
+            {
+                "line_number": 626,
+                "line_content": "(secp256k1_program::id(), secp256k1_account),"
+            },
+            {
+                "line_number": 631,
+                "line_content": "// Since libsecp256k1 is still using the old version of rand, this test"
+            },
+            {
+                "line_number": 633,
+                "line_content": "// https://docs.rs/libsecp256k1/latest/src/libsecp256k1/lib.rs.html#430"
+            },
+            {
+                "line_number": 638,
+                "line_content": "let mut ret = [0u8; libsecp256k1::util::SECRET_KEY_SIZE];"
+            },
+            {
+                "line_number": 640,
+                "line_content": "if let Ok(key) = libsecp256k1::SecretKey::parse(&ret) {"
+            },
+            {
+                "line_number": 647,
+                "line_content": "new_secp256k1_instruction(&secret_key, b\"hello\"),"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/runtime/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 89,
+                "line_content": "libsecp256k1 = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/runtime/src/bank/tests.rs",
+        "matches": [
+            {
+                "line_number": 88,
+                "line_content": "secp256k1_program,"
+            },
+            {
+                "line_number": 9992,
+                "line_content": "// libsecp256k1"
+            },
+            {
+                "line_number": 9993,
+                "line_content": "// Since libsecp256k1 is still using the old version of rand, this test"
+            },
+            {
+                "line_number": 9995,
+                "line_content": "// https://docs.rs/libsecp256k1/latest/src/libsecp256k1/lib.rs.html#430"
+            },
+            {
+                "line_number": 10000,
+                "line_content": "let mut ret = [0u8; libsecp256k1::util::SECRET_KEY_SIZE];"
+            },
+            {
+                "line_number": 10002,
+                "line_content": "if let Ok(key) = libsecp256k1::SecretKey::parse(&ret) {"
+            },
+            {
+                "line_number": 10009,
+                "line_content": "solana_sdk::secp256k1_instruction::new_secp256k1_instruction(&secp_privkey, message_arr);"
+            },
+            {
+                "line_number": 10212,
+                "line_content": "fn test_calculate_fee_secp256k1() {"
+            },
+            {
+                "line_number": 10222,
+                "line_content": "program_id: secp256k1_program::id(),"
+            },
+            {
+                "line_number": 10227,
+                "line_content": "program_id: secp256k1_program::id(),"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/programs/bpf_loader/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 15,
+                "line_content": "libsecp256k1 = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/programs/bpf_loader/src/syscalls/mod.rs",
+        "matches": [
+            {
+                "line_number": 51,
+                "line_content": "secp256k1_recover::{"
+            },
+            {
+                "line_number": 338,
+                "line_content": "result.register_function_hashed(*b\"sol_secp256k1_recover\", SyscallSecp256k1Recover::vm)?;"
+            },
+            {
+                "line_number": 809,
+                "line_content": "/// secp256k1_recover"
+            },
+            {
+                "line_number": 820,
+                "line_content": "let cost = invoke_context.get_compute_budget().secp256k1_recover_cost;"
+            },
+            {
+                "line_number": 835,
+                "line_content": "let secp256k1_recover_result = translate_slice_mut::<u8>("
+            },
+            {
+                "line_number": 842,
+                "line_content": "let Ok(message) = libsecp256k1::Message::parse_slice(hash) else {"
+            },
+            {
+                "line_number": 848,
+                "line_content": "let Ok(recovery_id) = libsecp256k1::RecoveryId::parse(adjusted_recover_id_val) else {"
+            },
+            {
+                "line_number": 851,
+                "line_content": "let Ok(signature) = libsecp256k1::Signature::parse_standard_slice(signature) else {"
+            },
+            {
+                "line_number": 855,
+                "line_content": "let public_key = match libsecp256k1::recover(&message, &signature, &recovery_id) {"
+            },
+            {
+                "line_number": 862,
+                "line_content": "secp256k1_recover_result.copy_from_slice(&public_key[1..65]);"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/programs/sbf/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 18,
+                "line_content": "libsecp256k1 = { version = \"0.7.0\", default-features = false }"
+            },
+            {
+                "line_number": 154,
+                "line_content": "\"rust/secp256k1_recover\","
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/programs/sbf/build.rs",
+        "matches": [
+            {
+                "line_number": 104,
+                "line_content": "\"secp256k1_recover\","
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/programs/sbf/rust/secp256k1_recover/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 2,
+                "line_content": "name = \"solana-sbf-rust-secp256k1-recover\""
+            },
+            {
+                "line_number": 3,
+                "line_content": "documentation = \"https://docs.rs/solana-sbf-rust-secp256k1-recover\""
+            },
+            {
+                "line_number": 13,
+                "line_content": "libsecp256k1 = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/programs/sbf/rust/secp256k1_recover/src/lib.rs",
+        "matches": [
+            {
+                "line_number": 6,
+                "line_content": "custom_heap_default, custom_panic_default, msg, secp256k1_recover::secp256k1_recover,"
+            },
+            {
+                "line_number": 9,
+                "line_content": "fn test_secp256k1_recover() {"
+            },
+            {
+                "line_number": 32,
+                "line_content": "let public_key = secp256k1_recover(&hash[..], recovery_id, &signature[..]).unwrap();"
+            },
+            {
+                "line_number": 36,
+                "line_content": "/// secp256k1_recover allows malleable signatures"
+            },
+            {
+                "line_number": 37,
+                "line_content": "fn test_secp256k1_recover_malleability() {"
+            },
+            {
+                "line_number": 61,
+                "line_content": "let signature = libsecp256k1::Signature::parse_standard_slice(&signature_bytes).unwrap();"
+            },
+            {
+                "line_number": 66,
+                "line_content": "let alt_recovery_id = libsecp256k1::RecoveryId::parse(recovery_id ^ 1).unwrap();"
+            },
+            {
+                "line_number": 72,
+                "line_content": "secp256k1_recover(&message_hash.0, recovery_id, &signature_bytes[..]).unwrap();"
+            },
+            {
+                "line_number": 76,
+                "line_content": "secp256k1_recover(&message_hash.0, alt_recovery_id, &alt_signature_bytes[..]).unwrap();"
+            },
+            {
+                "line_number": 82,
+                "line_content": "msg!(\"secp256k1_recover\");"
+            },
+            {
+                "line_number": 84,
+                "line_content": "test_secp256k1_recover();"
+            },
+            {
+                "line_number": 85,
+                "line_content": "test_secp256k1_recover_malleability();"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/programs/sbf/tests/programs.rs",
+        "matches": [
+            {
+                "line_number": 267,
+                "line_content": "(\"secp256k1_recover\", true),"
+            },
+            {
+                "line_number": 294,
+                "line_content": "(\"solana_sbf_rust_secp256k1_recover\", true),"
+            },
+            {
+                "line_number": 1368,
+                "line_content": "(\"secp256k1_recover\", 25383),"
+            },
+            {
+                "line_number": 1389,
+                "line_content": "(\"solana_sbf_rust_secp256k1_recover\", 91185),"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 34,
+                "line_content": "\"libsecp256k1\","
+            },
+            {
+                "line_number": 59,
+                "line_content": "libsecp256k1 = { workspace = true, optional = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 60,
+                "line_content": "libsecp256k1 = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/src/lib.rs",
+        "matches": [
+            {
+                "line_number": 442,
+                "line_content": "//! - __secp256k1 Program__: Verifies secp256k1 public key recovery operations."
+            },
+            {
+                "line_number": 443,
+                "line_content": "//!   - ID: [`solana_program::secp256k1_program`]"
+            },
+            {
+                "line_number": 444,
+                "line_content": "//!   - Instruction: [`solana_sdk::secp256k1_instruction`](https://docs.rs/solana-sdk/latest/solana_sdk/secp256k1_instruction/index.html)"
+            },
+            {
+                "line_number": 522,
+                "line_content": "pub mod secp256k1_program;"
+            },
+            {
+                "line_number": 523,
+                "line_content": "pub mod secp256k1_recover;"
+            },
+            {
+                "line_number": 569,
+                "line_content": "config, ed25519_program, feature, incinerator, loader_v4, secp256k1_program,"
+            },
+            {
+                "line_number": 579,
+                "line_content": "secp256k1_program::id(),"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/src/secp256k1_recover.rs",
+        "matches": [
+            {
+                "line_number": 1,
+                "line_content": "//! Public key recovery from [secp256k1] ECDSA signatures."
+            },
+            {
+                "line_number": 3,
+                "line_content": "//! [secp256k1]: https://en.bitcoin.it/wiki/Secp256k1"
+            },
+            {
+                "line_number": 9,
+                "line_content": "//! The [`secp256k1_recover`] syscall allows a secp256k1 public key that has"
+            },
+            {
+                "line_number": 14,
+                "line_content": "//! Use cases for `secp256k1_recover` include:"
+            },
+            {
+                "line_number": 17,
+                "line_content": "//! - Performing secp256k1 public key recovery generally."
+            },
+            {
+                "line_number": 18,
+                "line_content": "//! - Verifying a single secp256k1 signature."
+            },
+            {
+                "line_number": 20,
+                "line_content": "//! While `secp256k1_recover` can be used to verify secp256k1 signatures, Solana"
+            },
+            {
+                "line_number": 21,
+                "line_content": "//! also provides the [secp256k1 program][sp], which is more flexible, has lower CPU"
+            },
+            {
+                "line_number": 24,
+                "line_content": "//! [sp]: crate::secp256k1_program"
+            },
+            {
+                "line_number": 35,
+                "line_content": "#[error(\"The hash provided to a secp256k1_recover is invalid\")]"
+            },
+            {
+                "line_number": 37,
+                "line_content": "#[error(\"The recovery_id provided to a secp256k1_recover is invalid\")]"
+            },
+            {
+                "line_number": 39,
+                "line_content": "#[error(\"The signature provided to a secp256k1_recover is invalid\")]"
+            },
+            {
+                "line_number": 97,
+                "line_content": "/// Recover the public key from a [secp256k1] ECDSA signature and"
+            },
+            {
+                "line_number": 100,
+                "line_content": "/// [secp256k1]: https://en.bitcoin.it/wiki/Secp256k1"
+            },
+            {
+                "line_number": 126,
+                "line_content": "/// 64-byte secp256k1 public key. This public key corresponds to the secret key"
+            },
+            {
+                "line_number": 130,
+                "line_content": "/// While `secp256k1_recover` can be used to verify secp256k1 signatures by"
+            },
+            {
+                "line_number": 132,
+                "line_content": "/// the [secp256k1 program][sp], which is more flexible, has lower CPU cost, and"
+            },
+            {
+                "line_number": 135,
+                "line_content": "/// [sp]: crate::secp256k1_program"
+            },
+            {
+                "line_number": 137,
+                "line_content": "/// The `secp256k1_recover` syscall is implemented with the [`libsecp256k1`]"
+            },
+            {
+                "line_number": 140,
+                "line_content": "/// [`libsecp256k1`]: https://docs.rs/libsecp256k1/latest/libsecp256k1"
+            },
+            {
+                "line_number": 162,
+                "line_content": "/// **The solana `secp256k1_recover` function does not prevent signature"
+            },
+            {
+                "line_number": 163,
+                "line_content": "/// malleability**. This is in contrast to the Bitcoin secp256k1 library, which"
+            },
+            {
+                "line_number": 168,
+                "line_content": "/// To prevent signature malleability, it is common for secp256k1 signature"
+            },
+            {
+                "line_number": 185,
+                "line_content": "/// let signature = libsecp256k1::Signature::parse_standard_slice(&signature_bytes)"
+            },
+            {
+                "line_number": 194,
+                "line_content": "/// This has the downside that the program must link to the [`libsecp256k1`]"
+            },
+            {
+                "line_number": 195,
+                "line_content": "/// crate and parse the signature just for this check. Note that `libsecp256k1`"
+            },
+            {
+                "line_number": 198,
+                "line_content": "/// [`libsecp256k1`]: https://docs.rs/libsecp256k1/latest/libsecp256k1"
+            },
+            {
+                "line_number": 201,
+                "line_content": "/// prevention in secp256k1, refer to comments in [`secp256k1.h`] in the Bitcoin"
+            },
+            {
+                "line_number": 202,
+                "line_content": "/// Core secp256k1 library, the documentation of the [OpenZeppelin `recover`"
+            },
+            {
+                "line_number": 206,
+                "line_content": "/// [`secp256k1.h`]: https://github.com/bitcoin-core/secp256k1/blob/44c2452fd387f7ca604ab42d73746e7d3a44d8a2/include/secp256k1.h"
+            },
+            {
+                "line_number": 248,
+                "line_content": "/// signature with the `secp256k1_recover` syscall. It has three parts: a Solana"
+            },
+            {
+                "line_number": 266,
+                "line_content": "/// The Solana program. Note that it uses `libsecp256k1` version 0.7.0 to parse"
+            },
+            {
+                "line_number": 267,
+                "line_content": "/// the secp256k1 signature to prevent malleability."
+            },
+            {
+                "line_number": 274,
+                "line_content": "///     secp256k1_recover::secp256k1_recover,"
+            },
+            {
+                "line_number": 277,
+                "line_content": "/// /// The key we expect to sign secp256k1 messages,"
+            },
+            {
+                "line_number": 278,
+                "line_content": "/// /// as serialized by `libsecp256k1::PublicKey::serialize`."
+            },
+            {
+                "line_number": 291,
+                "line_content": "/// pub fn process_secp256k1_recover("
+            },
+            {
+                "line_number": 294,
+                "line_content": "///     // The secp256k1 recovery operation accepts a cryptographically-hashed"
+            },
+            {
+                "line_number": 298,
+                "line_content": "///     // This means that the code calling `secp256k1_recover` must perform the hash"
+            },
+            {
+                "line_number": 310,
+                "line_content": "///         let signature = libsecp256k1::Signature::parse_standard_slice(&instruction.signature)"
+            },
+            {
+                "line_number": 319,
+                "line_content": "///     let recovered_pubkey = secp256k1_recover("
+            },
+            {
+                "line_number": 328,
+                "line_content": "///     // Here we are checking the secp256k1 pubkey against a known authorized pubkey."
+            },
+            {
+                "line_number": 360,
+                "line_content": "/// pub fn demo_secp256k1_recover("
+            },
+            {
+                "line_number": 362,
+                "line_content": "///     secp256k1_secret_key: &libsecp256k1::SecretKey,"
+            },
+            {
+                "line_number": 373,
+                "line_content": "///     let secp_message = libsecp256k1::Message::parse(&message_hash.0);"
+            },
+            {
+                "line_number": 374,
+                "line_content": "///     let (signature, recovery_id) = libsecp256k1::sign(&secp_message, &secp256k1_secret_key);"
+            },
+            {
+                "line_number": 402,
+                "line_content": "pub fn secp256k1_recover("
+            },
+            {
+                "line_number": 411,
+                "line_content": "crate::syscalls::sol_secp256k1_recover("
+            },
+            {
+                "line_number": 427,
+                "line_content": "let message = libsecp256k1::Message::parse_slice(hash)"
+            },
+            {
+                "line_number": 429,
+                "line_content": "let recovery_id = libsecp256k1::RecoveryId::parse(recovery_id)"
+            },
+            {
+                "line_number": 431,
+                "line_content": "let signature = libsecp256k1::Signature::parse_standard_slice(signature)"
+            },
+            {
+                "line_number": 433,
+                "line_content": "let secp256k1_key = libsecp256k1::recover(&message, &signature, &recovery_id)"
+            },
+            {
+                "line_number": 435,
+                "line_content": "Ok(Secp256k1Pubkey::new(&secp256k1_key.serialize()[1..65]))"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/src/fee_calculator.rs",
+        "matches": [
+            {
+                "line_number": 5,
+                "line_content": "crate::{clock::DEFAULT_MS_PER_SLOT, ed25519_program, message::Message, secp256k1_program},"
+            },
+            {
+                "line_number": 37,
+                "line_content": "if (secp256k1_program::check_id(&id) || ed25519_program::check_id(&id))"
+            },
+            {
+                "line_number": 231,
+                "line_content": "fn test_fee_calculator_calculate_fee_secp256k1() {"
+            },
+            {
+                "line_number": 237,
+                "line_content": "program_id: crate::secp256k1_program::id(),"
+            },
+            {
+                "line_number": 242,
+                "line_content": "program_id: crate::secp256k1_program::id(),"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/src/secp256k1_program.rs",
+        "matches": [
+            {
+                "line_number": 1,
+                "line_content": "//! The [secp256k1 native program][np]."
+            },
+            {
+                "line_number": 3,
+                "line_content": "//! [np]: https://docs.solanalabs.com/runtime/programs#secp256k1-program"
+            },
+            {
+                "line_number": 5,
+                "line_content": "//! Constructors for secp256k1 program instructions, and documentation on the"
+            },
+            {
+                "line_number": 6,
+                "line_content": "//! program's usage can be found in [`solana_sdk::secp256k1_instruction`]."
+            },
+            {
+                "line_number": 8,
+                "line_content": "//! [`solana_sdk::secp256k1_instruction`]: https://docs.rs/solana-sdk/latest/solana_sdk/secp256k1_instruction/index.html"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/src/message/sanitized.rs",
+        "matches": [
+            {
+                "line_number": 16,
+                "line_content": "secp256k1_program,"
+            },
+            {
+                "line_number": 370,
+                "line_content": "if secp256k1_program::check_id(program_id) {"
+            },
+            {
+                "line_number": 372,
+                "line_content": "transaction_signature_details.num_secp256k1_instruction_signatures ="
+            },
+            {
+                "line_number": 374,
+                "line_content": ".num_secp256k1_instruction_signatures"
+            },
+            {
+                "line_number": 396,
+                "line_content": "num_secp256k1_instruction_signatures: u64,"
+            },
+            {
+                "line_number": 404,
+                "line_content": ".saturating_add(self.num_secp256k1_instruction_signatures)"
+            },
+            {
+                "line_number": 413,
+                "line_content": "/// return the number of secp256k1 instruction signatures"
+            },
+            {
+                "line_number": 414,
+                "line_content": "pub fn num_secp256k1_instruction_signatures(&self) -> u64 {"
+            },
+            {
+                "line_number": 415,
+                "line_content": "self.num_secp256k1_instruction_signatures"
+            },
+            {
+                "line_number": 624,
+                "line_content": "let mock_secp256k1_instr = CompiledInstruction::new(3, &[1u8; 10], vec![]);"
+            },
+            {
+                "line_number": 635,
+                "line_content": "secp256k1_program::id(),"
+            },
+            {
+                "line_number": 641,
+                "line_content": "mock_secp256k1_instr.clone(),"
+            },
+            {
+                "line_number": 643,
+                "line_content": "mock_secp256k1_instr,"
+            },
+            {
+                "line_number": 651,
+                "line_content": "// expect 2 secp256k1 instruction signatures - 1 for each mock_secp2561k1_instr"
+            },
+            {
+                "line_number": 652,
+                "line_content": "assert_eq!(2, signature_details.num_secp256k1_instruction_signatures);"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/src/sysvar/instructions.rs",
+        "matches": [
+            {
+                "line_number": 6,
+                "line_content": "//! native programs like the [secp256k1] and [ed25519] programs."
+            },
+            {
+                "line_number": 9,
+                "line_content": "//! [secp256k1]: crate::secp256k1_program"
+            },
+            {
+                "line_number": 26,
+                "line_content": "//! documentation for [`secp256k1_instruction`] in the `solana-sdk` crate."
+            },
+            {
+                "line_number": 28,
+                "line_content": "//! [`secp256k1_instruction`]: https://docs.rs/solana-sdk/latest/solana_sdk/secp256k1_instruction/index.html"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/src/syscalls/definitions.rs",
+        "matches": [
+            {
+                "line_number": 47,
+                "line_content": "define_syscall!(fn sol_secp256k1_recover(hash: *const u8, recovery_id: u64, signature: *const u8, result: *mut u8) -> u64);"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/src/lib.rs",
+        "matches": [
+            {
+                "line_number": 55,
+                "line_content": "program_pack, rent, sanitize, sdk_ids, secp256k1_program, secp256k1_recover, serde_varint,"
+            },
+            {
+                "line_number": 97,
+                "line_content": "pub mod secp256k1_instruction;"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/src/secp256k1_instruction.rs",
+        "matches": [
+            {
+                "line_number": 1,
+                "line_content": "//! Instructions for the [secp256k1 native program][np]."
+            },
+            {
+                "line_number": 3,
+                "line_content": "//! [np]: https://docs.solanalabs.com/runtime/programs#secp256k1-program"
+            },
+            {
+                "line_number": 9,
+                "line_content": "//! The secp26k1 native program peforms flexible verification of [secp256k1]"
+            },
+            {
+                "line_number": 13,
+                "line_content": "//! the same transaction as the secp256k1 instruction."
+            },
+            {
+                "line_number": 15,
+                "line_content": "//! The secp256k1 native program ID is located in the [`secp256k1_program`] module."
+            },
+            {
+                "line_number": 19,
+                "line_content": "//! hashes of secp256k1 public keys, and internally is implemented using the"
+            },
+            {
+                "line_number": 20,
+                "line_content": "//! secp256k1 key recovery algorithm. Ethereum address can be created for"
+            },
+            {
+                "line_number": 21,
+                "line_content": "//! secp256k1 public keys with the [`construct_eth_pubkey`] function."
+            },
+            {
+                "line_number": 26,
+                "line_content": "//! [`ecrecover`] precompile. For that Solana provides the [`secp256k1_recover`]"
+            },
+            {
+                "line_number": 29,
+                "line_content": "//! [secp256k1]: https://en.bitcoin.it/wiki/Secp256k1"
+            },
+            {
+                "line_number": 30,
+                "line_content": "//! [`secp256k1_program`]: solana_program::secp256k1_program"
+            },
+            {
+                "line_number": 31,
+                "line_content": "//! [`secp256k1_recover`]: solana_program::secp256k1_recover"
+            },
+            {
+                "line_number": 34,
+                "line_content": "//! Use cases for the secp256k1 instruction include:"
+            },
+            {
+                "line_number": 38,
+                "line_content": "//! - Verifying arbitrary secp256k1 signatures."
+            },
+            {
+                "line_number": 43,
+                "line_content": "//! The [`new_secp256k1_instruction`] function is suitable for building a"
+            },
+            {
+                "line_number": 44,
+                "line_content": "//! secp256k1 program instruction for basic use cases were a single message must"
+            },
+            {
+                "line_number": 46,
+                "line_content": "//! Ethereum-integration use cases, construction of the secp256k1 instruction"
+            },
+            {
+                "line_number": 51,
+                "line_content": "//! Transactions that uses the secp256k1 native program will typically include"
+            },
+            {
+                "line_number": 52,
+                "line_content": "//! at least two instructions: one for the secp256k1 program to verify the"
+            },
+            {
+                "line_number": 53,
+                "line_content": "//! signatures, and one for a custom program that will check that the secp256k1"
+            },
+            {
+                "line_number": 68,
+                "line_content": "//!   - Sign the [`keccak`]-hashed messages with a secp256k1 ECDSA library,"
+            },
+            {
+                "line_number": 69,
+                "line_content": "//!     like the [`libsecp256k1`] crate."
+            },
+            {
+                "line_number": 71,
+                "line_content": "//!     Ethereum address data that will be used by the secp256k1 instruction."
+            },
+            {
+                "line_number": 72,
+                "line_content": "//!   - Build the secp256k1 program instruction data, specifying the number of"
+            },
+            {
+                "line_number": 77,
+                "line_content": "//!     of the secp256k1 native program."
+            },
+            {
+                "line_number": 80,
+                "line_content": "//!   - Load the secp256k1 instruction data with"
+            },
+            {
+                "line_number": 82,
+                "line_content": "//!   - Check that the secp256k1 program ID is equal to"
+            },
+            {
+                "line_number": 83,
+                "line_content": "//!     [`secp256k1_program::ID`], so that the signature verification cannot be"
+            },
+            {
+                "line_number": 88,
+                "line_content": "//! [`secp256k1_program::ID`]: crate::secp256k1_program::ID"
+            },
+            {
+                "line_number": 90,
+                "line_content": "//! The signature, message, or Ethereum addresses may reside in the secp256k1"
+            },
+            {
+                "line_number": 92,
+                "line_content": "//! of the protocol required by the secp256k1 instruction to locate the"
+            },
+            {
+                "line_number": 94,
+                "line_content": "//! `new_secp256k1_instruction` for simple signature verification."
+            },
+            {
+                "line_number": 97,
+                "line_content": "//! transactions necessary for properly using the secp256k1 native program."
+            },
+            {
+                "line_number": 101,
+                "line_content": "//! the the secp256k1 instruction data. It must be done manually."
+            },
+            {
+                "line_number": 103,
+                "line_content": "//! The secp256k1 program is implemented with the [`libsecp256k1`] crate,"
+            },
+            {
+                "line_number": 106,
+                "line_content": "//! [`libsecp256k1`]: https://docs.rs/libsecp256k1/latest/libsecp256k1"
+            },
+            {
+                "line_number": 108,
+                "line_content": "//! # Layout and interpretation of the secp256k1 instruction data"
+            },
+            {
+                "line_number": 110,
+                "line_content": "//! The secp256k1 instruction data contains:"
+            },
+            {
+                "line_number": 149,
+                "line_content": "//! **The solana `secp256k1_recover` function does not prevent signature"
+            },
+            {
+                "line_number": 150,
+                "line_content": "//! malleability**. This is in contrast to the Bitcoin secp256k1 library, which"
+            },
+            {
+                "line_number": 156,
+                "line_content": "//! malleability, see the documentation for the [`secp256k1_recover`] syscall."
+            },
+            {
+                "line_number": 160,
+                "line_content": "//! Most programs will want to be conservative about the layout of the secp256k1 instruction"
+            },
+            {
+                "line_number": 169,
+                "line_content": "//! Loading the secp256k1 instruction data within a program requires access to"
+            },
+            {
+                "line_number": 179,
+                "line_content": "//! Programs should _always_ verify that the secp256k1 program ID loaded through"
+            },
+            {
+                "line_number": 180,
+                "line_content": "//! the instructions sysvar has the same value as in the [`secp256k1_program`]"
+            },
+            {
+                "line_number": 183,
+                "line_content": "//! [`secp256k1_program`]: crate::secp256k1_program"
+            },
+            {
+                "line_number": 206,
+                "line_content": "//! to parse the secp256k1 instruction data from within a Solana program."
+            },
+            {
+                "line_number": 209,
+                "line_content": "//! mod secp256k1_defs {"
+            },
+            {
+                "line_number": 229,
+                "line_content": "//!        secp256k1_instr_data: &[u8],"
+            },
+            {
+                "line_number": 232,
+                "line_content": "//!         let num_structs = *secp256k1_instr_data"
+            },
+            {
+                "line_number": 237,
+                "line_content": "//!         let all_structs_slice = secp256k1_instr_data"
+            },
+            {
+                "line_number": 260,
+                "line_content": "//! ## Example: Signing and verifying with `new_secp256k1_instruction`"
+            },
+            {
+                "line_number": 262,
+                "line_content": "//! This example demonstrates the simplest way to use the secp256k1 program, by"
+            },
+            {
+                "line_number": 263,
+                "line_content": "//! calling [`new_secp256k1_instruction`] to sign a single message and build the"
+            },
+            {
+                "line_number": 264,
+                "line_content": "//! corresponding secp256k1 instruction."
+            },
+            {
+                "line_number": 268,
+                "line_content": "//! and the Solana program will introspect the secp256k1 instruction to verify"
+            },
+            {
+                "line_number": 271,
+                "line_content": "//! The Solana program. Note that it uses `libsecp256k1` version 0.7.0 to parse"
+            },
+            {
+                "line_number": 272,
+                "line_content": "//! the secp256k1 signature to prevent malleability."
+            },
+            {
+                "line_number": 275,
+                "line_content": "//! # mod secp256k1_defs {"
+            },
+            {
+                "line_number": 295,
+                "line_content": "//! #        secp256k1_instr_data: &[u8],"
+            },
+            {
+                "line_number": 298,
+                "line_content": "//! #         let num_structs = *secp256k1_instr_data"
+            },
+            {
+                "line_number": 303,
+                "line_content": "//! #         let all_structs_slice = secp256k1_instr_data"
+            },
+            {
+                "line_number": 329,
+                "line_content": "//!     secp256k1_program,"
+            },
+            {
+                "line_number": 333,
+                "line_content": "//! /// An Ethereum address corresponding to a secp256k1 secret key that is"
+            },
+            {
+                "line_number": 340,
+                "line_content": "//! /// Check the secp256k1 instruction to ensure it was signed by"
+            },
+            {
+                "line_number": 345,
+                "line_content": "//! fn demo_secp256k1_verify_basic("
+            },
+            {
+                "line_number": 356,
+                "line_content": "//!     // Load the secp256k1 instruction."
+            },
+            {
+                "line_number": 357,
+                "line_content": "//!     // `new_secp256k1_instruction` generates an instruction that must be at index 0."
+            },
+            {
+                "line_number": 358,
+                "line_content": "//!     let secp256k1_instr ="
+            },
+            {
+                "line_number": 361,
+                "line_content": "//!     // Verify it is a secp256k1 instruction."
+            },
+            {
+                "line_number": 362,
+                "line_content": "//!     // This is security-critical - what if the transaction uses an imposter secp256k1 program?"
+            },
+            {
+                "line_number": 363,
+                "line_content": "//!     assert!(secp256k1_program::check_id(&secp256k1_instr.program_id));"
+            },
+            {
+                "line_number": 367,
+                "line_content": "//!     assert!(secp256k1_instr.data.len() > 1);"
+            },
+            {
+                "line_number": 369,
+                "line_content": "//!     let num_signatures = secp256k1_instr.data[0];"
+            },
+            {
+                "line_number": 370,
+                "line_content": "//!     // `new_secp256k1_instruction` generates an instruction that contains one signature."
+            },
+            {
+                "line_number": 374,
+                "line_content": "//!     let offsets: secp256k1_defs::SecpSignatureOffsets ="
+            },
+            {
+                "line_number": 375,
+                "line_content": "//!         secp256k1_defs::iter_signature_offsets(&secp256k1_instr.data)?"
+            },
+            {
+                "line_number": 379,
+                "line_content": "//!     // `new_secp256k1_instruction` generates an instruction that only uses instruction index 0."
+            },
+            {
+                "line_number": 388,
+                "line_content": "//!         let signature = &secp256k1_instr.data[offsets.signature_offset as usize"
+            },
+            {
+                "line_number": 389,
+                "line_content": "//!             ..offsets.signature_offset as usize + secp256k1_defs::SIGNATURE_SERIALIZED_SIZE];"
+            },
+            {
+                "line_number": 390,
+                "line_content": "//!         let signature = libsecp256k1::Signature::parse_standard_slice(signature)"
+            },
+            {
+                "line_number": 400,
+                "line_content": "//!     // to do here to ensure it trusts the secp256k1 instruction, e.g.:"
+            },
+            {
+                "line_number": 403,
+                "line_content": "//!     // - verify the secp256k1 signer is authorized"
+            },
+            {
+                "line_number": 405,
+                "line_content": "//!     // Here we are checking the secp256k1 pubkey against a known authorized pubkey."
+            },
+            {
+                "line_number": 406,
+                "line_content": "//!     let eth_address = &secp256k1_instr.data[offsets.eth_address_offset as usize"
+            },
+            {
+                "line_number": 407,
+                "line_content": "//!         ..offsets.eth_address_offset as usize + secp256k1_defs::HASHED_PUBKEY_SERIALIZED_SIZE];"
+            },
+            {
+                "line_number": 425,
+                "line_content": "//!     secp256k1_instruction,"
+            },
+            {
+                "line_number": 431,
+                "line_content": "//! fn demo_secp256k1_verify_basic("
+            },
+            {
+                "line_number": 433,
+                "line_content": "//!     secp256k1_secret_key: &libsecp256k1::SecretKey,"
+            },
+            {
+                "line_number": 437,
+                "line_content": "//!     // Internally to `new_secp256k1_instruction` and"
+            },
+            {
+                "line_number": 438,
+                "line_content": "//!     // `secp256k_instruction::verify` (the secp256k1 program), this message is"
+            },
+            {
+                "line_number": 441,
+                "line_content": "//!     let secp256k1_instr = secp256k1_instruction::new_secp256k1_instruction(&secp256k1_secret_key, msg);"
+            },
+            {
+                "line_number": 453,
+                "line_content": "//!         &[secp256k1_instr, program_instr],"
+            },
+            {
+                "line_number": 467,
+                "line_content": "//! This examples demonstrates manually creating a secp256k1 instruction"
+            },
+            {
+                "line_number": 470,
+                "line_content": "//! use of the secp256k1 program."
+            },
+            {
+                "line_number": 472,
+                "line_content": "//! Recall that the secp256k1 program will accept signatures, messages, and"
+            },
+            {
+                "line_number": 479,
+                "line_content": "//! secp256k1 instruction. The code for storing this data across multiple"
+            },
+            {
+                "line_number": 488,
+                "line_content": "//! # mod secp256k1_defs {"
+            },
+            {
+                "line_number": 508,
+                "line_content": "//! #        secp256k1_instr_data: &[u8],"
+            },
+            {
+                "line_number": 511,
+                "line_content": "//! #         let num_structs = *secp256k1_instr_data"
+            },
+            {
+                "line_number": 516,
+                "line_content": "//! #         let all_structs_slice = secp256k1_instr_data"
+            },
+            {
+                "line_number": 542,
+                "line_content": "//!     secp256k1_program,"
+            },
+            {
+                "line_number": 548,
+                "line_content": "//!     signature: [u8; secp256k1_defs::SIGNATURE_SERIALIZED_SIZE],"
+            },
+            {
+                "line_number": 550,
+                "line_content": "//!     eth_address: [u8; secp256k1_defs::HASHED_PUBKEY_SERIALIZED_SIZE],"
+            },
+            {
+                "line_number": 554,
+                "line_content": "//! /// Load all signatures indicated in the secp256k1 instruction."
+            },
+            {
+                "line_number": 559,
+                "line_content": "//!     secp256k1_instr_data: &[u8],"
+            },
+            {
+                "line_number": 563,
+                "line_content": "//!     for offsets in secp256k1_defs::iter_signature_offsets(secp256k1_instr_data)? {"
+            },
+            {
+                "line_number": 579,
+                "line_content": "//!             ..offsets.signature_offset as usize + secp256k1_defs::SIGNATURE_SERIALIZED_SIZE];"
+            },
+            {
+                "line_number": 581,
+                "line_content": "//!             [offsets.signature_offset as usize + secp256k1_defs::SIGNATURE_SERIALIZED_SIZE];"
+            },
+            {
+                "line_number": 583,
+                "line_content": "//!             ..offsets.eth_address_offset as usize + secp256k1_defs::HASHED_PUBKEY_SERIALIZED_SIZE];"
+            },
+            {
+                "line_number": 588,
+                "line_content": "//!             <[u8; secp256k1_defs::SIGNATURE_SERIALIZED_SIZE]>::try_from(signature).unwrap();"
+            },
+            {
+                "line_number": 590,
+                "line_content": "//!             <[u8; secp256k1_defs::HASHED_PUBKEY_SERIALIZED_SIZE]>::try_from(eth_address).unwrap();"
+            },
+            {
+                "line_number": 603,
+                "line_content": "//! fn demo_secp256k1_custom_many("
+            },
+            {
+                "line_number": 613,
+                "line_content": "//!     let secp256k1_instr ="
+            },
+            {
+                "line_number": 616,
+                "line_content": "//!     assert!(secp256k1_program::check_id(&secp256k1_instr.program_id));"
+            },
+            {
+                "line_number": 618,
+                "line_content": "//!     let signatures = load_signatures(&secp256k1_instr.data, instructions_sysvar_account)?;"
+            },
+            {
+                "line_number": 642,
+                "line_content": "//!     secp256k1_instruction::{"
+            },
+            {
+                "line_number": 659,
+                "line_content": "//! /// Create the instruction data for a secp256k1 instruction."
+            },
+            {
+                "line_number": 661,
+                "line_content": "//! /// `instruction_index` is the index the secp256k1 instruction will appear"
+            },
+            {
+                "line_number": 663,
+                "line_content": "//! /// the signatures into the secp256k1 instruction data, and not into any other"
+            },
+            {
+                "line_number": 665,
+                "line_content": "//! fn make_secp256k1_instruction_data("
+            },
+            {
+                "line_number": 671,
+                "line_content": "//!     // We're going to pack all the signatures into the secp256k1 instruction data."
+            },
+            {
+                "line_number": 673,
+                "line_content": "//!     // the secp256k1 program parses to find those signatures."
+            },
+            {
+                "line_number": 728,
+                "line_content": "//! fn demo_secp256k1_custom_many("
+            },
+            {
+                "line_number": 736,
+                "line_content": "//!         let secret_key = libsecp256k1::SecretKey::random(&mut rand0_7::thread_rng());"
+            },
+            {
+                "line_number": 743,
+                "line_content": "//!         let secp_message = libsecp256k1::Message::parse(&message_hash.0);"
+            },
+            {
+                "line_number": 744,
+                "line_content": "//!         let (signature, recovery_id) = libsecp256k1::sign(&secp_message, &secret_key);"
+            },
+            {
+                "line_number": 748,
+                "line_content": "//!         let public_key = libsecp256k1::PublicKey::from_secret_key(&secret_key);"
+            },
+            {
+                "line_number": 749,
+                "line_content": "//!         let eth_address = secp256k1_instruction::construct_eth_pubkey(&public_key);"
+            },
+            {
+                "line_number": 759,
+                "line_content": "//!     let secp256k1_instr_data = make_secp256k1_instruction_data(&signatures, 0)?;"
+            },
+            {
+                "line_number": 760,
+                "line_content": "//!     let secp256k1_instr = Instruction::new_with_bytes("
+            },
+            {
+                "line_number": 761,
+                "line_content": "//!         solana_sdk::secp256k1_program::ID,"
+            },
+            {
+                "line_number": 762,
+                "line_content": "//!         &secp256k1_instr_data,"
+            },
+            {
+                "line_number": 776,
+                "line_content": "//!         &[secp256k1_instr, program_instr],"
+            },
+            {
+                "line_number": 793,
+                "line_content": "libsecp256k1_fail_on_bad_count, libsecp256k1_fail_on_bad_count2, FeatureSet,"
+            },
+            {
+                "line_number": 807,
+                "line_content": "/// Offsets of signature data within a secp256k1 instruction."
+            },
+            {
+                "line_number": 830,
+                "line_content": "/// Sign a message and create a secp256k1 program instruction to verify the signature."
+            },
+            {
+                "line_number": 832,
+                "line_content": "/// This function is suitable for simple uses of the secp256k1 program."
+            },
+            {
+                "line_number": 833,
+                "line_content": "/// More complex uses must encode the secp256k1 instruction data manually."
+            },
+            {
+                "line_number": 846,
+                "line_content": "pub fn new_secp256k1_instruction("
+            },
+            {
+                "line_number": 847,
+                "line_content": "priv_key: &libsecp256k1::SecretKey,"
+            },
+            {
+                "line_number": 850,
+                "line_content": "let secp_pubkey = libsecp256k1::PublicKey::from_secret_key(priv_key);"
+            },
+            {
+                "line_number": 857,
+                "line_content": "let message = libsecp256k1::Message::parse(&message_hash_arr);"
+            },
+            {
+                "line_number": 858,
+                "line_content": "let (signature, recovery_id) = libsecp256k1::sign(&message, priv_key);"
+            },
+            {
+                "line_number": 900,
+                "line_content": "program_id: solana_sdk::secp256k1_program::id(),"
+            },
+            {
+                "line_number": 906,
+                "line_content": "/// Creates an Ethereum address from a secp256k1 public key."
+            },
+            {
+                "line_number": 908,
+                "line_content": "pubkey: &libsecp256k1::PublicKey,"
+            },
+            {
+                "line_number": 916,
+                "line_content": "/// Verifies the signatures specified in the secp256k1 instruction data."
+            },
+            {
+                "line_number": 918,
+                "line_content": "/// This is same the verification routine executed by the runtime's secp256k1 native program,"
+            },
+            {
+                "line_number": 921,
+                "line_content": "/// `data` is the secp256k1 program's instruction data. `instruction_datas` is"
+            },
+            {
+                "line_number": 923,
+                "line_content": "/// including the secp256k1 program's instruction data."
+            },
+            {
+                "line_number": 927,
+                "line_content": "/// subsequent to the addition of the secp256k1 native program. For many"
+            },
+            {
+                "line_number": 938,
+                "line_content": "if (feature_set.is_active(&libsecp256k1_fail_on_bad_count::id())"
+            },
+            {
+                "line_number": 939,
+                "line_content": "|| feature_set.is_active(&libsecp256k1_fail_on_bad_count2::id()))"
+            },
+            {
+                "line_number": 944,
+                "line_content": "// correct, fail the instruction to catch probable invalid secp256k1"
+            },
+            {
+                "line_number": 975,
+                "line_content": "let signature = libsecp256k1::Signature::parse_standard_slice("
+            },
+            {
+                "line_number": 980,
+                "line_content": "let recovery_id = libsecp256k1::RecoveryId::parse(signature_instruction[sig_end])"
+            },
+            {
+                "line_number": 1003,
+                "line_content": "let pubkey = libsecp256k1::recover("
+            },
+            {
+                "line_number": 1004,
+                "line_content": "&libsecp256k1::Message::parse_slice(&message_hash).unwrap(),"
+            },
+            {
+                "line_number": 1046,
+                "line_content": "secp256k1_instruction::{"
+            },
+            {
+                "line_number": 1047,
+                "line_content": "new_secp256k1_instruction, SecpSignatureOffsets, SIGNATURE_OFFSETS_SERIALIZED_SIZE,"
+            },
+            {
+                "line_number": 1215,
+                "line_content": "fn test_secp256k1() {"
+            },
+            {
+                "line_number": 1223,
+                "line_content": "let secp_privkey = libsecp256k1::SecretKey::random(&mut thread_rng());"
+            },
+            {
+                "line_number": 1225,
+                "line_content": "let mut secp_instruction = new_secp256k1_instruction(&secp_privkey, message_arr);"
+            },
+            {
+                "line_number": 1254,
+                "line_content": "let secret_key = libsecp256k1::SecretKey::random(&mut thread_rng());"
+            },
+            {
+                "line_number": 1255,
+                "line_content": "let public_key = libsecp256k1::PublicKey::from_secret_key(&secret_key);"
+            },
+            {
+                "line_number": 1265,
+                "line_content": "let secp_message = libsecp256k1::Message::parse(&message_hash.0);"
+            },
+            {
+                "line_number": 1266,
+                "line_content": "let (signature, recovery_id) = libsecp256k1::sign(&secp_message, &secret_key);"
+            },
+            {
+                "line_number": 1271,
+                "line_content": "let alt_recovery_id = libsecp256k1::RecoveryId::parse(recovery_id.serialize() ^ 1).unwrap();"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/src/feature_set.rs",
+        "matches": [
+            {
+                "line_number": 57,
+                "line_content": "pub mod secp256k1_program_enabled {"
+            },
+            {
+                "line_number": 89,
+                "line_content": "pub mod secp256k1_recover_syscall_enabled {"
+            },
+            {
+                "line_number": 117,
+                "line_content": "pub mod libsecp256k1_0_5_upgrade_enabled {"
+            },
+            {
+                "line_number": 157,
+                "line_content": "pub mod libsecp256k1_fail_on_bad_count {"
+            },
+            {
+                "line_number": 161,
+                "line_content": "pub mod libsecp256k1_fail_on_bad_count2 {"
+            },
+            {
+                "line_number": 333,
+                "line_content": "pub mod limit_secp256k1_recovery_id {"
+            },
+            {
+                "line_number": 795,
+                "line_content": "(secp256k1_program_enabled::id(), \"secp256k1 program\"),"
+            },
+            {
+                "line_number": 808,
+                "line_content": "(secp256k1_recover_syscall_enabled::id(), \"secp256k1_recover syscall\"),"
+            },
+            {
+                "line_number": 815,
+                "line_content": "(libsecp256k1_0_5_upgrade_enabled::id(), \"upgrade libsecp256k1 to v0.5.0\"),"
+            },
+            {
+                "line_number": 824,
+                "line_content": "(libsecp256k1_fail_on_bad_count::id(), \"fail libsecp256k1_verify if count appears wrong\"),"
+            },
+            {
+                "line_number": 825,
+                "line_content": "(libsecp256k1_fail_on_bad_count2::id(), \"fail libsecp256k1_verify if count appears wrong\"),"
+            },
+            {
+                "line_number": 867,
+                "line_content": "(limit_secp256k1_recovery_id::id(), \"limit secp256k1 recovery id\"),"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/src/precompiles.rs",
+        "matches": [
+            {
+                "line_number": 80,
+                "line_content": "crate::secp256k1_program::id(),"
+            },
+            {
+                "line_number": 82,
+                "line_content": "crate::secp256k1_instruction::verify,"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/accounts-db/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 73,
+                "line_content": "libsecp256k1 = { workspace = true }"
+            }
+        ]
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 215,
+                "line_content": "hmac = \"0.12.1\""
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 56,
+                "line_content": "hmac = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/src/signer/keypair.rs",
+        "matches": [
+            {
+                "line_number": 12,
+                "line_content": "hmac::Hmac,"
+            }
+        ]
+    }
+]

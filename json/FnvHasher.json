@@ -1,0 +1,32 @@
+[
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/bloom/benches/bloom.rs",
+        "matches": [
+            {
+                "line_number": 6,
+                "line_content": "fnv::FnvHasher,"
+            },
+            {
+                "line_number": 21,
+                "line_content": "let mut hasher = FnvHasher::default();"
+            },
+            {
+                "line_number": 36,
+                "line_content": "let mut hasher = FnvHasher::default();"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/bloom/src/bloom.rs",
+        "matches": [
+            {
+                "line_number": 5,
+                "line_content": "fnv::FnvHasher,"
+            },
+            {
+                "line_number": 138,
+                "line_content": "let mut hasher = FnvHasher::with_key(hash_index);"
+            }
+        ]
+    }
+]

@@ -1,0 +1,281 @@
+[
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 158,
+                "line_content": "blake3 = \"1.5.0\""
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/core/src/banking_stage/immutable_deserialized_packet.rs",
+        "matches": [
+            {
+                "line_number": 106,
+                "line_content": "// This function deserializes packets into transactions, computes the blake3 hash of transaction"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/runtime/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 17,
+                "line_content": "blake3 = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/programs/bpf_loader/src/syscalls/mod.rs",
+        "matches": [
+            {
+                "line_number": 32,
+                "line_content": "blake3, bpf_loader, bpf_loader_deprecated, bpf_loader_upgradeable,"
+            },
+            {
+                "line_number": 37,
+                "line_content": "self, blake3_syscall_enabled, curve25519_syscall_enabled,"
+            },
+            {
+                "line_number": 143,
+                "line_content": "pub struct Blake3Hasher(blake3::Hasher);"
+            },
+            {
+                "line_number": 175,
+                "line_content": "type Output = blake3::Hash;"
+            },
+            {
+                "line_number": 178,
+                "line_content": "Blake3Hasher(blake3::Hasher::default())"
+            },
+            {
+                "line_number": 270,
+                "line_content": "let blake3_syscall_enabled = feature_set.is_active(&blake3_syscall_enabled::id());"
+            },
+            {
+                "line_number": 343,
+                "line_content": "blake3_syscall_enabled,"
+            },
+            {
+                "line_number": 344,
+                "line_content": "*b\"sol_blake3\","
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/programs/sbf/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 13,
+                "line_content": "blake3 = \"1.0.0\""
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/programs/sbf/rust/sha/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 13,
+                "line_content": "blake3 = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/programs/sbf/rust/sha/src/lib.rs",
+        "matches": [
+            {
+                "line_number": 22,
+                "line_content": "fn test_blake3_hasher() {"
+            },
+            {
+                "line_number": 23,
+                "line_content": "use solana_program::blake3::hashv;"
+            },
+            {
+                "line_number": 27,
+                "line_content": "let hash = blake3::hash(&[v0, v1].concat());"
+            },
+            {
+                "line_number": 37,
+                "line_content": "test_blake3_hasher();"
+            },
+            {
+                "line_number": 53,
+                "line_content": "test_blake3_hasher();"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 16,
+                "line_content": "blake3 = { workspace = true, features = [\"digest\", \"traits-preview\"] }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/src/lib.rs",
+        "matches": [
+            {
+                "line_number": 478,
+                "line_content": "pub mod blake3;"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/src/blake3.rs",
+        "matches": [
+            {
+                "line_number": 1,
+                "line_content": "//! Hashing with the [blake3] hash function."
+            },
+            {
+                "line_number": 3,
+                "line_content": "//! [blake3]: https://github.com/BLAKE3-team/BLAKE3"
+            },
+            {
+                "line_number": 17,
+                "line_content": "/// A blake3 hash."
+            },
+            {
+                "line_number": 40,
+                "line_content": "hasher: blake3::Hasher,"
+            },
+            {
+                "line_number": 143,
+                "line_content": "crate::syscalls::sol_blake3("
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/src/hash.rs",
+        "matches": [
+            {
+                "line_number": 23,
+                "line_content": "/// a [SHA-256] hash, but may instead contain a [blake3] hash, as created by the"
+            },
+            {
+                "line_number": 24,
+                "line_content": "/// [`blake3`] module (and used in [`Message::hash`])."
+            },
+            {
+                "line_number": 27,
+                "line_content": "/// [blake3]: https://github.com/BLAKE3-team/BLAKE3"
+            },
+            {
+                "line_number": 28,
+                "line_content": "/// [`blake3`]: crate::blake3"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/src/message/legacy.rs",
+        "matches": [
+            {
+                "line_number": 470,
+                "line_content": "/// Compute the blake3 hash of this transaction's message."
+            },
+            {
+                "line_number": 477,
+                "line_content": "/// Compute the blake3 hash of a raw transaction message."
+            },
+            {
+                "line_number": 480,
+                "line_content": "use blake3::traits::digest::Digest;"
+            },
+            {
+                "line_number": 481,
+                "line_content": "let mut hasher = blake3::Hasher::new();"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/src/message/versions/mod.rs",
+        "matches": [
+            {
+                "line_number": 139,
+                "line_content": "/// Compute the blake3 hash of this transaction's message"
+            },
+            {
+                "line_number": 145,
+                "line_content": "/// Compute the blake3 hash of a raw transaction message"
+            },
+            {
+                "line_number": 147,
+                "line_content": "use blake3::traits::digest::Digest;"
+            },
+            {
+                "line_number": 148,
+                "line_content": "let mut hasher = blake3::Hasher::new();"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/src/syscalls/definitions.rs",
+        "matches": [
+            {
+                "line_number": 48,
+                "line_content": "define_syscall!(fn sol_blake3(vals: *const u8, val_len: u64, hash_result: *mut u8) -> u64);"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/src/lib.rs",
+        "matches": [
+            {
+                "line_number": 48,
+                "line_content": "account_info, address_lookup_table, alt_bn128, big_mod_exp, blake3, borsh, borsh0_10, borsh0_9,"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/src/feature_set.rs",
+        "matches": [
+            {
+                "line_number": 97,
+                "line_content": "pub mod blake3_syscall_enabled {"
+            },
+            {
+                "line_number": 810,
+                "line_content": "(blake3_syscall_enabled::id(), \"blake3 syscall\"),"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/accounts-db/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 15,
+                "line_content": "blake3 = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/accounts-db/src/accounts_hash.rs",
+        "matches": [
+            {
+                "line_number": 1175,
+                "line_content": "let hash = blake3::hash(bytemuck::bytes_of(&item.pubkey));"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/accounts-db/src/accounts_db.rs",
+        "matches": [
+            {
+                "line_number": 76,
+                "line_content": "blake3::traits::digest::Digest,"
+            },
+            {
+                "line_number": 6114,
+                "line_content": "let mut hasher = blake3::Hasher::new();"
+            },
+            {
+                "line_number": 18200,
+                "line_content": "let hash = blake3::hash(bytemuck::bytes_of(pubkey));"
+            }
+        ]
+    }
+]

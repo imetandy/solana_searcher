@@ -1,0 +1,58 @@
+[
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 195,
+                "line_content": "ed25519-dalek-bip32 = \"0.2.0\""
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 32,
+                "line_content": "\"ed25519-dalek-bip32\","
+            },
+            {
+                "line_number": 54,
+                "line_content": "ed25519-dalek-bip32 = { workspace = true, optional = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/src/signer/keypair.rs",
+        "matches": [
+            {
+                "line_number": 11,
+                "line_content": "ed25519_dalek_bip32::Error as Bip32Error,"
+            },
+            {
+                "line_number": 225,
+                "line_content": "bip32_derived_keypair(seed, derivation_path).map_err(|err| err.to_string().into())"
+            },
+            {
+                "line_number": 229,
+                "line_content": "fn bip32_derived_keypair("
+            },
+            {
+                "line_number": 233,
+                "line_content": "let extended = ed25519_dalek_bip32::ExtendedSecretKey::from_seed(seed)"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/clap-v3-utils/src/keypair.rs",
+        "matches": [
+            {
+                "line_number": 934,
+                "line_content": "/// The bip32 hierarchical derivation of an ElGamal keypair is not currently"
+            },
+            {
+                "line_number": 1005,
+                "line_content": "/// The bip32 hierarchical derivation of an authenticated encryption key is not"
+            }
+        ]
+    }
+]

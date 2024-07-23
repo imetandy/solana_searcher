@@ -1,0 +1,112 @@
+[
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 194,
+                "line_content": "ed25519-dalek = \"=1.0.1\""
+            },
+            {
+                "line_number": 195,
+                "line_content": "ed25519-dalek-bip32 = \"0.2.0\""
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/core/src/banking_stage/latest_unprocessed_votes.rs",
+        "matches": [
+            {
+                "line_number": 116,
+                "line_content": "// This requires updating dependencies of ed25519-dalek as rand_core is not compatible cross"
+            },
+            {
+                "line_number": 117,
+                "line_content": "// version https://github.com/dalek-cryptography/ed25519-dalek/pull/214"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/runtime/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 88,
+                "line_content": "ed25519-dalek = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/runtime/src/bank/tests.rs",
+        "matches": [
+            {
+                "line_number": 10023,
+                "line_content": "// https://docs.rs/ed25519-dalek/1.0.1/src/ed25519_dalek/secret.rs.html#167"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/programs/ed25519-tests/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 13,
+                "line_content": "ed25519-dalek = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/programs/ed25519-tests/tests/process_transaction.rs",
+        "matches": [
+            {
+                "line_number": 13,
+                "line_content": "// https://docs.rs/ed25519-dalek/1.0.1/src/ed25519_dalek/secret.rs.html#167"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 31,
+                "line_content": "\"ed25519-dalek\","
+            },
+            {
+                "line_number": 32,
+                "line_content": "\"ed25519-dalek-bip32\","
+            },
+            {
+                "line_number": 53,
+                "line_content": "ed25519-dalek = { workspace = true, optional = true }"
+            },
+            {
+                "line_number": 54,
+                "line_content": "ed25519-dalek-bip32 = { workspace = true, optional = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/src/signature.rs",
+        "matches": [
+            {
+                "line_number": 208,
+                "line_content": "// Unfortunately, ed25519-dalek doesn't surface the internal error types that we'd ideally"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/cli-output/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 34,
+                "line_content": "ed25519-dalek = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/accounts-db/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 72,
+                "line_content": "ed25519-dalek = { workspace = true }"
+            }
+        ]
+    }
+]

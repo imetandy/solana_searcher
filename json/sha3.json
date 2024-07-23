@@ -1,0 +1,156 @@
+[
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 303,
+                "line_content": "sha3 = \"0.10.4\""
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/zk-token-sdk/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 34,
+                "line_content": "sha3 = \"0.9\""
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/zk-token-sdk/src/encryption/auth_encryption.rs",
+        "matches": [
+            {
+                "line_number": 16,
+                "line_content": "sha3::{Digest, Sha3_512},"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/zk-token-sdk/src/encryption/pedersen.rs",
+        "matches": [
+            {
+                "line_number": 15,
+                "line_content": "sha3::Sha3_512,"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/zk-token-sdk/src/encryption/elgamal.rs",
+        "matches": [
+            {
+                "line_number": 50,
+                "line_content": "sha3::{Digest, Sha3_512},"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/zk-token-sdk/src/range_proof/inner_product.rs",
+        "matches": [
+            {
+                "line_number": 427,
+                "line_content": "sha3::Sha3_512,"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/zk-token-sdk/src/range_proof/generators.rs",
+        "matches": [
+            {
+                "line_number": 7,
+                "line_content": "sha3::{Sha3XofReader, Shake256},"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/target/release/build/oid-registry-cbdc8458b5bcd629/out/oid_db.rs",
+        "matches": [
+            {
+                "line_number": 343,
+                "line_content": "self.insert(oid!(2.16.840.1.101.3.4.2.2), OidEntry::new(\"sha384\", \"Secure Hash Algorithm that uses a 384 bit key (SHA384)\"));"
+            },
+            {
+                "line_number": 359,
+                "line_content": "self.insert(oid!(1.2.840.113549.1.1.12), OidEntry::new(\"sha384WithRSAEncryption\", \"SHA384 with RSA encryption\"));"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/target/debug/build/oid-registry-cbff4a0a3518657e/out/oid_db.rs",
+        "matches": [
+            {
+                "line_number": 343,
+                "line_content": "self.insert(oid!(2.16.840.1.101.3.4.2.2), OidEntry::new(\"sha384\", \"Secure Hash Algorithm that uses a 384 bit key (SHA384)\"));"
+            },
+            {
+                "line_number": 359,
+                "line_content": "self.insert(oid!(1.2.840.113549.1.1.12), OidEntry::new(\"sha384WithRSAEncryption\", \"SHA384 with RSA encryption\"));"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/target/debug/build/oid-registry-feb50f81c2dc56a1/out/oid_db.rs",
+        "matches": [
+            {
+                "line_number": 343,
+                "line_content": "self.insert(oid!(2.16.840.1.101.3.4.2.2), OidEntry::new(\"sha384\", \"Secure Hash Algorithm that uses a 384 bit key (SHA384)\"));"
+            },
+            {
+                "line_number": 359,
+                "line_content": "self.insert(oid!(1.2.840.113549.1.1.12), OidEntry::new(\"sha384WithRSAEncryption\", \"SHA384 with RSA encryption\"));"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 35,
+                "line_content": "\"sha3\","
+            },
+            {
+                "line_number": 77,
+                "line_content": "sha3 = { workspace = true, optional = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/Cargo.toml",
+        "matches": [
+            {
+                "line_number": 35,
+                "line_content": "sha3 = { workspace = true }"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/program/src/keccak.rs",
+        "matches": [
+            {
+                "line_number": 8,
+                "line_content": "sha3::{Digest, Keccak256},"
+            },
+            {
+                "line_number": 51,
+                "line_content": "// At the time of this writing, the sha3 library is stuck on an old version"
+            }
+        ]
+    },
+    {
+        "file_path": "/Users/andrew/Documents/projects/solana/sdk/src/secp256k1_instruction.rs",
+        "matches": [
+            {
+                "line_number": 852,
+                "line_content": "let mut hasher = sha3::Keccak256::new();"
+            },
+            {
+                "line_number": 911,
+                "line_content": "addr.copy_from_slice(&sha3::Keccak256::digest(&pubkey.serialize()[1..])[12..]);"
+            },
+            {
+                "line_number": 999,
+                "line_content": "let mut hasher = sha3::Keccak256::new();"
+            }
+        ]
+    }
+]

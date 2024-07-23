@@ -53,9 +53,9 @@ def save_results_to_json(matching_files, output_dir):
 
 # Example usage
 root_directory = '/Users/andrew/Documents/projects/solana'
-search_strs = ['ed25519', 'hmac', 'curve22519'] 
+search_strs = ['ed25519-dalek', 'curve25519-dalek', 'bip32', 'secp256k1', 'hmac', 'sha2', 'sha3', 'siphasher', 'blake3', 'FnvHasher', 'tls']  # Specify the search strings
 file_types = ['.txt', '.rs', '.toml']  # Specify the file types you want to search in
-output_directory = '/Users/andrew/Documents/projects/solana_searcher'  # Writable directory for output
+output_directory = '/Users/andrew/Documents/projects/solana_searcher/json'  # Writable directory for output
 
 matching_files = search_strings_in_files(root_directory, search_strs, file_types)
 save_results_to_json(matching_files, output_directory)
